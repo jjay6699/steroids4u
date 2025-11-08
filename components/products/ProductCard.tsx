@@ -33,7 +33,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
     <Link href={`/products/${slug}`}>
       <div className="border border-border rounded-lg overflow-hidden hover:shadow-card transition-shadow cursor-pointer h-full flex flex-col bg-white">
         {/* Image Container */}
-        <div className="relative w-full h-64 bg-gray-100 overflow-hidden">
+        <div className="relative w-full h-40 md:h-64 bg-gray-100 overflow-hidden">
           {imageUrl ? (
             <Image
               src={imageUrl}
@@ -63,7 +63,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         {/* Content */}
         <div className="p-4 flex-1 flex flex-col">
           {/* Category Badge */}
-          <span className="inline-block bg-gray-200 text-dark-text text-xs font-semibold px-2 py-1 rounded-full mb-2 w-fit">
+          <span className="inline-block bg-gray-200 text-dark-text text-[10px] md:text-xs font-semibold px-2 py-1 rounded-full mb-2 w-fit">
             {category}
           </span>
 
@@ -86,7 +86,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
                 // Add to cart logic will be implemented later
               }}
               disabled={!inStock}
-              className="w-full md:w-auto"
+              className="w-full md:w-auto text-xs md:text-sm"
             >
               Add to Cart
             </Button>
