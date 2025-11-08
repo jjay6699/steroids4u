@@ -150,19 +150,19 @@ export default function Home() {
 
       {/* Featured Products Section */}
       <section className="max-w-7xl mx-auto px-4 py-16">
-        <div className="mb-12 flex items-center justify-between">
+        <div className="mb-12 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">Featured Products</h2>
+            <h2 className="text-2xl md:text-4xl font-bold mb-2">Featured Products</h2>
             <p className="text-muted">Check out our best-selling products</p>
           </div>
-          <Link href="/products">
+          <Link href="/products" className="flex-shrink-0">
             <Button variant="outline" size="sm">
               View All
             </Button>
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
           {loading ? (
             [1, 2, 3, 4].map((i) => (
               <div key={i} className="bg-gray-200 h-64 rounded-lg animate-pulse" />
@@ -190,19 +190,19 @@ export default function Home() {
       {/* Best for Cutting Section */}
       <section className="bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="mb-12 flex items-center justify-between">
+          <div className="mb-12 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-2">Best for Cutting</h2>
+              <h2 className="text-2xl md:text-4xl font-bold mb-2">Best for Cutting</h2>
               <p className="text-muted">Top products for cutting cycles</p>
             </div>
-            <Link href="/products?category=cutting">
+            <Link href="/products?category=cutting" className="flex-shrink-0">
               <Button variant="outline" size="sm">
                 View All
               </Button>
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
             {loading ? (
               [1, 2, 3, 4].map((i) => (
                 <div key={i} className="bg-gray-200 h-64 rounded-lg animate-pulse" />
@@ -230,19 +230,19 @@ export default function Home() {
 
       {/* Best for Bulking Section */}
       <section className="max-w-7xl mx-auto px-4 py-16">
-        <div className="mb-12 flex items-center justify-between">
+        <div className="mb-12 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">Best for Bulking</h2>
+            <h2 className="text-2xl md:text-4xl font-bold mb-2">Best for Bulking</h2>
             <p className="text-muted">Top products for bulking cycles</p>
           </div>
-          <Link href="/products?category=bulking">
+          <Link href="/products?category=bulking" className="flex-shrink-0">
             <Button variant="outline" size="sm">
               View All
             </Button>
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
           {loading ? (
             [1, 2, 3, 4].map((i) => (
               <div key={i} className="bg-gray-200 h-64 rounded-lg animate-pulse" />
@@ -284,11 +284,11 @@ export default function Home() {
       <section className="bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-4">
           <div className="mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">Shop by Manufacturer</h2>
+            <h2 className="text-2xl md:text-4xl font-bold mb-2">Shop by Manufacturer</h2>
             <p className="text-muted">Check our the best manufacturers below</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-3 md:gap-6">
             {manufacturers.length > 0 ? (
               manufacturers.map((manufacturer) => (
                 <Link

@@ -177,9 +177,9 @@ export const Footer: React.FC = () => {
               <Image
                 src="/s4u-logo2.webp"
                 alt="Steroids4u Logo"
-                width={120}
-                height={48}
-                className="h-12 w-auto"
+                width={200}
+                height={80}
+                className="h-16 w-auto"
                 priority
               />
             </div>

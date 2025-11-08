@@ -76,7 +76,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           <h3 className="font-semibold text-sm mb-2 line-clamp-2 flex-1">{name}</h3>
 
           {/* Price and Button */}
-          <div className="flex items-center justify-between mt-auto pt-2 border-t border-border">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between mt-auto pt-2 border-t border-border gap-2">
             <span className="text-lg font-bold text-dark-text">€{price.toFixed(2)}</span>
             <Button
               variant="primary"
@@ -86,6 +86,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
                 // Add to cart logic will be implemented later
               }}
               disabled={!inStock}
+              className="w-full md:w-auto"
             >
               Add to Cart
             </Button>
